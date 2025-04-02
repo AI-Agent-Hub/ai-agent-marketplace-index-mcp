@@ -36,8 +36,6 @@ MCP Server for AI Agent Marketplace Index from DeepNLP, , allowing AI assistants
 
 ```
 uv run -m ai-agent-marketplace-index-mcp
-
-uv run -m ai-agent-marketplace-index-mcp
 ```
 
 ### development

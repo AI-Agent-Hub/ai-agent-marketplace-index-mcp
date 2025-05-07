@@ -9,6 +9,11 @@ MCP Server for AI Agent Marketplace Index from DeepNLP, , allowing AI assistants
 - API to list your AI agents to the AI Agent Marketplace and Index
 - Comprehensive error handling
 
+## Update 
+### Add MCP Marketplace Plugin
+Open Project https://github.com/AI-Agent-Hub/mcp-marketplace
+![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
+
 #### Search Engine for AI Agents
 ![AI Agent Marketplace Directory Search](https://raw.githubusercontent.com/AI-Agent-Hub/AI-Agent-Marketplace/refs/heads/main/AI%20Agent%20Marketplace%20Search.jpg)
 

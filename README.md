@@ -88,6 +88,39 @@ General search of AI Agents for information, websites, content and metric statis
 search_ai_agent(q: str, limit: int = 100, timeout: int = 5)
 ```
 
+## Resources 
+
+### MCP Marketplace API Support
+![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?ai-agent-hub/ai-agent-marketplace-index-mcp)
+- Allow any agent rag workflow to find this MCP Server via python/typescript API
+- Search relevant servers by query/id/category
+- Give LLM chances to choose this tools and enhance usage.
+
+***Example: Search Server and Tools***
+```python
+    import mcp_marketplace as mcpm
+    mcpm.set_endpoint("deepnlp") # choose various open mcp marketplace endpoint
+
+    result_q = mcpm.search(id="ai-agent-marketplace-index-mcp", mode="dict", page_id=0, count_per_page=100)
+    result_id = mcpm.search(id="ai-agent-hub/ai-agent-marketplace-index-mcp", mode="dict", page_id=0, count_per_page=100)
+    tools = mcpm.list_tools(id="ai-agent-hub/ai-agent-marketplace-index-mcp")
+```
+
+***Example: Integrate with LLM e.g. Claude***
+```python
+    import anthropic
+    client = anthropic.Anthropic()
+
+    # Step 1. search mcp by query/id to find this mcp
+
+    # Step 2. Calling LLM for Better Usage and MCP Selection
+    response = client.messages.create(
+        model="claude-3-7-sonnet-20250219", max_tokens=1024, tools=tools, messages=[]
+    )
+    print(response)
+    ## install remote servers if tools from this mcp are chosen
+```
+
 ## License
 
 [MIT License](LICENSE)
